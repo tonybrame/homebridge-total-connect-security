@@ -1,0 +1,23 @@
+<script>
+	function runThis()
+	{
+
+        alert('got here!');
+
+		var connect = require('./tc_connect');
+
+
+		var config = [];
+
+        config["username"] = "tbrame1";
+        config["password"] = "Or@nges1";
+        config["appID"] = "14588";
+        config["version"] = "1.0.0";
+
+        this.tcService = new TC_Module.TC_Connect(console, config);
+
+        alert('got here?');
+	}
+</script>
+
+<body><button onclick="runThis();">hello</button></body>
