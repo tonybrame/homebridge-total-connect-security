@@ -25,7 +25,7 @@ function TC2Accessory(log, config) {
     this.name = config["name"];
 
 
-    this.tcService = new TC_Module.TC_Connect(this.log, config);
+    this.tcService = new TC_Module(this.log, config);
 
     this.service = new Service.Switch(this.name);
 
