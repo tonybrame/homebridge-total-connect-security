@@ -3,7 +3,7 @@
  * */
 
 var http = require('http');
-var TC_Module =  require('./tc_connect');
+var TC_Module =  require('./lib/tc_connect');
 
 var config = [];
 
