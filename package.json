@@ -1,6 +1,6 @@
 {
   "name": "homebridge-total-connect-security",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Total Connect plugin for homebridge: https://github.com/nfarina/homebridge",
   "license": "ISC",
   "keywords": [
@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "request": "^2.65.0",
-    "xml-js": "^1.6.2"
+    "xml-js": "^1.6.2",
+    "node-jsencrypt": "^1.0.0",
+    "jsonwebtoken": "^8.0.0"
   }
 }

@@ -15,9 +15,9 @@ config["version"] = "1.0.0";
 this.tcService = new TC_Module(console.log, config);
 
 this.tcService.tcIsArmed(callbackToMe);
-// this.tcService.tcArm(callbackToMe);
-// this.tcService.tcDisarm(callbackToMe);
-//
+//this.tcService.tcArm(callbackToMe);
+//this.tcService.tcDisarm(callbackToMe);
+
 function callbackToMe(err, info)
 {
     console.log('called back ' + info);
