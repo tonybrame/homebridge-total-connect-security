@@ -7,10 +7,10 @@ var TC_Module =  require('./lib/tc_connect');
 
 var config = [];
 
-config["username"] = "xxxx";
-config["password"] = "xxxx";
-config["appID"] = "14588";
-config["version"] = "1.0.0";
+config["username"] = "user";
+config["password"] = "pass";
+config["appID"] = "16808";
+config["version"] = "3.42.1.106";
 
 runit();
 
@@ -19,6 +19,7 @@ async function runit() {
     this.tcService = new TC_Module(console.log, config);
 
     console.log("Start");
+
     this.tcService.tcIsArmed(callbackToMe);
     //this.tcService.tcArm(callbackToMe);
     //this.tcService.tcDisarm(callbackToMe);
@@ -27,11 +28,18 @@ async function runit() {
 
     this.tcService.tcIsArmed(callbackToMe);
 
-    //if I sleep for 3 minutes, i get a 401 unauth error
-    await sleeeeep(180000); // Sleep for 10 seconds ... 3 minutes.
+    // await sleeeeep(110000); // Sleep for under 119 seconds, but long enough to trigger a refresh.
+
+    // this.tcService.tcIsArmed(callbackToMe);
+
+    //if I sleep for 2 minutes, i will kill the session, and get a new token. (timeout is 119 seconds)
+    await sleeeeep(120000); 
 
     this.tcService.tcIsArmed(callbackToMe);
     
+    //testing sleep for 10 minutes, should refresh the token a lot... 
+    await sleeeeep(120000 * 5); 
+
     console.log("End");
 }
 
